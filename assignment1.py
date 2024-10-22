@@ -1,3 +1,14 @@
+# Name: JASKARAN SINGH SIDHU
+# OSU Email: sidhuja@oregonstate.edu
+# Course: CS261 - Data Structures
+# Assignment: 1
+# Due Date: 10/21/2024
+# Description: This code implements solutions to ten fundamental problems using StaticArray.
+# The problems include min-max finding, FizzBuzz, reversing arrays, rotation,
+# generating ranges, checking if sorted, finding mode, removing duplicates, count sorting, 
+# and returning sorted squares. These functions are designed to work efficiently 
+# with the provided StaticArray class.
+
 from static_array import StaticArray
 
 def min_max(arr: StaticArray) -> tuple[int, int]:
