@@ -11,6 +11,7 @@
 
 from static_array import StaticArray
 
+
 def min_max(arr: StaticArray) -> tuple[int, int]:
     """Finds the minimum and maximum values in a StaticArray."""
     min_val = arr.get(0)
@@ -22,6 +23,7 @@ def min_max(arr: StaticArray) -> tuple[int, int]:
         if val > max_val:
             max_val = val
     return min_val, max_val
+
 
 def fizz_buzz(arr: StaticArray) -> StaticArray:
     """Replaces integers divisible by 3 and/or 5 with strings."""
@@ -38,6 +40,7 @@ def fizz_buzz(arr: StaticArray) -> StaticArray:
             result.set(i, val)
     return result
 
+
 def reverse(arr: StaticArray) -> None:
     """Reverses the StaticArray in place."""
     left, right = 0, arr.length() - 1
@@ -48,6 +51,7 @@ def reverse(arr: StaticArray) -> None:
         left += 1
         right -= 1
 
+
 def rotate(arr: StaticArray, steps: int) -> StaticArray:
     """Rotates elements of the StaticArray by the given steps."""
     n = arr.length()
@@ -57,6 +61,7 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
         result.set((i + steps) % n, arr.get(i))
     return result
 
+
 def sa_range(start: int, end: int) -> StaticArray:
     """Generates a StaticArray with consecutive integers from start to end."""
     size = abs(end - start) + 1
@@ -65,9 +70,10 @@ def sa_range(start: int, end: int) -> StaticArray:
     for i in range(size):
         result.set(i, start + i * step)
     return result
-    
+
+
 def is_sorted(arr: StaticArray) -> int:
-    """Checks if the StaticArray is sorted in ascending or descending order."""
+    """Checks if the StaticArray is strictly sorted in ascending or descending order."""
     ascending = True
     descending = True
 
@@ -83,6 +89,7 @@ def is_sorted(arr: StaticArray) -> int:
         return -1
     else:
         return 0
+
 
 def find_mode(arr: StaticArray) -> tuple[object, int]:
     """Finds the mode (most frequent element) and its frequency."""
@@ -101,6 +108,7 @@ def find_mode(arr: StaticArray) -> tuple[object, int]:
             mode = arr.get(i)
 
     return mode, max_count
+
 
 def remove_duplicates(arr: StaticArray) -> StaticArray:
     """Removes duplicate elements from a sorted StaticArray."""
@@ -121,6 +129,7 @@ def remove_duplicates(arr: StaticArray) -> StaticArray:
         final_result.set(i, result.get(i))
 
     return final_result
+
 
 def count_sort(arr: StaticArray) -> StaticArray:
     """Sorts the StaticArray using the count sort algorithm."""
